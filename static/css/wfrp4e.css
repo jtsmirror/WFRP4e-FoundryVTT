@@ -14589,13 +14589,14 @@ input.card-edit {
 }
 
 .wfrp4e.actor .condition-list,
-  .wfrp4e.item-sheet .condition-list {
+.wfrp4e.item-sheet .condition-list {
   display: flex;
-  margin-bottom: 5px
+  justify-content: center;
+  margin-bottom: 5px;
 }
 
 .wfrp4e.item-sheet .condition-list img,
-  .wfrp4e.actor .condition-list img{
+.wfrp4e.actor .condition-list img {
   object-fit: contain;
 }
 .wfrp4e.item-sheet .condition-list img {

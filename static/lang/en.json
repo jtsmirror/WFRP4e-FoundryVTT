@@ -1621,11 +1621,11 @@
     "DIFFICULTY.MooFutile": "Futile (-50)",
     "DIFFICULTY.MooImpossible": "Impossible (-60)",
 
-    "Point Blank": "Point Blank",
-    "Short Range": "Short Range",
-    "Normal": "Normal",
-    "Long Range": "Long Range",
-    "Extreme": "Extreme",
+    "Point Blank": "Point Blank (Bezpośredni)",
+    "Short Range": "Short Range (Krótki)",
+    "Normal": "Normal (Normalny)",
+    "Long Range": "Long Range (Długi)",
+    "Extreme": "Extreme (Ekstremalny)",
 
     "Career Selector": "Career Selector",
     "SHEET.NoCareers": "No Careers Found",
