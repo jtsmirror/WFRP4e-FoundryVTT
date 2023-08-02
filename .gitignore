@@ -10,4 +10,4 @@ foundryconfig.json
 build
 docs
 .github/workflows/pages.yml
-.DS_Store
+/.DS_Store
