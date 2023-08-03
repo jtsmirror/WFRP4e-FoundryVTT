@@ -575,14 +575,14 @@
     "CHARGEN.Species.SelectSpecies" : "Select a Species",
     "CHARGEN.Species.SelectSubSpecies" : "Select a subpecies",
     "CHARGEN.Species.NoSubspecies" : "No subspecies available",
-    "CHARGEN.Species.ChooseSpecies" : "Alternatively, choose a species for no bonus experience",
+    "CHARGEN.Species.ChooseSpecies" : "Alternatively, choose desired species",
 
     "CHARGEN.Career.ChooseCareer" : "Choose {name}",
     "CHARGEN.Career.ReplacementsAvailable" : "Replacements available",
     "CHARGEN.Career.ReplacementsAvailableDescription" : "Based on the careers rolled, these alternate options are available",
-    "CHARGEN.Career.RollAgain" : "Roll again for two more choices for less XP",
-    "CHARGEN.Career.KeepRolling" : "Keep rolling (no extra experience)",
-    "CHARGEN.Career.DragDrop" : "Alternatively, drag and drop a career item to use that career instead (for no extra experience)",
+    "CHARGEN.Career.RollAgain" : "Roll again for two more choices",
+    "CHARGEN.Career.KeepRolling" : "Keep rolling",
+    "CHARGEN.Career.DragDrop" : "Alternatively, drag and drop a career item to use that career instead",
 
 
     "CHARGEN.Attributes.Reroll" : "Reroll",
@@ -590,7 +590,7 @@
     "CHARGEN.Attributes.Rearrange" : "Rearrange",
     "CHARGEN.Attributes.Allocation" : "Allocation",
     "CHARGEN.Attributes.NotHappy" : "Not happy with these numbers?",
-    "CHARGEN.Attributes.Instructions" : "Drag and drop the Roll values to rearrange the stats (but doing so provides less XP). Or you can reroll and receive no XP. Alternatively, allocate 100 points as you wish (for no XP).",
+    "CHARGEN.Attributes.Instructions" : "Drag and drop the Roll values to rearrange the stats. Or you can reroll everything (but this will be the final result). Alternatively, allocate 100 points as you wish.",
     "CHARGEN.Attributes.AllocationPoints" : "Allocate 100 Points to characteristics (min. 4, max: 18)",
     "CHARGEN.Attributes.AllocationSpent" : "You have spent {spent}",
     "CHARGEN.Attributes.ExtraPoints" : "Allocate Extra Points ({points} left)",

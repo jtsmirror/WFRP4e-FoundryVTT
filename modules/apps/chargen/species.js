@@ -93,7 +93,7 @@ export class SpeciesStage extends ChargenStage {
   // Set roll, unselect whatever user has chosen
   async onRollSpecies(event) {
     event.stopPropagation();
-    this.context.exp = 20;
+    this.context.exp = 0;
     this.context.roll = await game.wfrp4e.tables.rollTable("species");
     this.context.choose = false;
     this.updateMessage("Rolled", {rolled : this.context.roll.result})
