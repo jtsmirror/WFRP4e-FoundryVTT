@@ -57,10 +57,10 @@ export class AttributesStage extends ChargenStage {
     this.calculateTotals();
 
     if (this.context.step <= Step.FIRST_ROLL) {
-      this.context.exp = 50;
+      this.context.exp = 0;
     }
     else if (this.context.step == Step.SWAPPING && !this.context.hasRerolled) {
-      this.context.exp = 25;
+      this.context.exp = 0;
     }
 
     else

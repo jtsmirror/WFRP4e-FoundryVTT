@@ -3592,6 +3592,8 @@
   .app.window-app.sheet.wfrp4e.actor .general .charimg {
     flex-direction: row;
     margin: 3px 8px 0px 0px;
+    border-radius: 50%;
+    background: none;
     border: none;
     min-width: 95px;
     min-height: 95px;
@@ -14591,6 +14593,7 @@ input.card-edit {
 .wfrp4e.actor .condition-list,
   .wfrp4e.item-sheet .condition-list {
   display: flex;
+  justify-content: center;
   margin-bottom: 5px
 }
 

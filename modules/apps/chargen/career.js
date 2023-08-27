@@ -36,14 +36,14 @@ export class CareerStage extends ChargenStage {
 
     // First step, roll 1 career
     if (this.context.step == 1) {
-      this.context.exp = 50;
+      this.context.exp = 0;
       await this.addCareerChoice();
       // QoL: Upon the first career roll, automatically set the selected career to it
       this.context.career = this.context.careers[0];
     }
     // Second step, Roll 2 more careers
     if (this.context.step == 2) {
-      this.context.exp = 25;
+      this.context.exp = 0;
       await this.addCareerChoice(2);
     }
     // Third step, keep rolling careers
