@@ -12,3 +12,4 @@ docs
 .github/workflows/pages.yml
 packs/*/*
 !packs/*/*.json
+/.DS_Store
