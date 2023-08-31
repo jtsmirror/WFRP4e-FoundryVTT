@@ -273,7 +273,7 @@ export class SkillsTalentsStage extends ChargenStage {
       let index = Number(ev.currentTarget.dataset.index);
       let talent = await game.wfrp4e.tables.rollTable("talents");
       this.context.speciesTalents.random[index] = talent.text
-      this.updateMessage("RerolledDuplicate", { rolled: talent.text })
+      this.updateMessage("RerolledDuplicateTalent", { rolled: talent.text })
       this.render(true);
     })
   }
