@@ -1145,8 +1145,7 @@ WFRP4E.PrepareSystemItems = function() {
                                 terror += Math.abs(test.result.SL)
                     
                             args.actor.addCondition("broken", terror)
-                        }
-                    })`
+                        }`
                 }
             }
         }
@@ -1976,6 +1975,8 @@ WFRP4E.syncEffectTriggers = [
     "preWoundCalc",
     "woundCalc",
     "calculateSize",
+    "targetPrefillDialog",
+    "prefillDialog",
     "preAPCalc",
     "APCalc",
     "prePrepareItem",
