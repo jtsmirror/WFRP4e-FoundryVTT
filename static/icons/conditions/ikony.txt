@@ -1,3 +1,6 @@
 diagonal
 gradient (from) - #B77642
 gradient (to) - #646462
+gm
+gradient (from) - #4B202A
+gradient (to) - #52524E
