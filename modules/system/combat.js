@@ -5,7 +5,6 @@ export default class CombatHelpers {
 
 
     static scripts = {
-        startCombat: [CombatHelpers.checkFearTerror],
         endCombat: [CombatHelpers.clearCombatantAdvantage, CombatHelpers.endCombatChecks],
         startTurn: [CombatHelpers.startTurnChecks],
         endRound: [CombatHelpers.checkEndRoundConditions, CombatHelpers.fearReminders],
