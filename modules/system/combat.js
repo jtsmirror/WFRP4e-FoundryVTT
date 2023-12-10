@@ -5,6 +5,7 @@ export default class CombatHelpers {
 
 
     static scripts = {
+        startCombat: [CombatHelpers.checkFearTerror],
         endCombat: [CombatHelpers.clearCombatantAdvantage, CombatHelpers.endCombatChecks],
         startTurn: [CombatHelpers.startTurnChecks],
         endRound: [CombatHelpers.checkEndRoundConditions, CombatHelpers.fearReminders],
@@ -118,14 +119,14 @@ export default class CombatHelpers {
         }
         let msg = ""
         if (fearCounters.length || terrorCounters.length) {
+            if (terrorCounters.length)
+            msg += `<h2>${game.i18n.localize("CHAT.Terror")}</h2>${terrorCounters.map(t => `<b>${t.name}</b> - ${t.value}`).join("<br>")}`
             if (fearCounters.length)
                 msg += `<h2>${game.i18n.localize("CHAT.Fear")}</h2>${fearCounters.map(f => `<b>${f.name}</b> - ${f.value}`).join("<br>")}`
-            if (terrorCounters.length)
-                msg += `<h2>${game.i18n.localize("CHAT.Terror")}</h2>${terrorCounters.map(t => `<b>${t.name}</b> - ${t.value}`).join("<br>")}`
 
         }
 
-        msg += CombatHelpers.checkSizeFearTerror(combat)
+        // msg += CombatHelpers.checkSizeFearTerror(combat)
 
         if (msg)
             ChatMessage.create({ content: msg })
