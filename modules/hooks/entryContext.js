@@ -78,7 +78,7 @@ export default function () {
       //Once per roll (or at least, not on a reroll card)
       let message = game.messages.get(li.attr("data-message-id"));
       let test = message.getTest();
-      return test && test.actor.isOwner && test.actor.status.fortune?.value > 0 && test.result.outcome == "failure" && !test.fortuneUsed.SL 
+      return test && test.actor.isOwner && test.actor.status.fortune?.value > 0 && test.result.outcome == "success" && !test.fortuneUsed.SL 
     };
     let canApplyDarkDeals = function (li) {
       //Condition to have the darkdeak contextual options:
