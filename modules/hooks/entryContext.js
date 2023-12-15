@@ -78,7 +78,7 @@ export default function () {
       //Once per roll (or at least, not on a reroll card)
       let message = game.messages.get(li.attr("data-message-id"));
       let test = message.getTest();
-      return test && test.actor.isOwner && test.actor.status.fortune?.value > 0 && !test.fortuneUsed.SL 
+      return test && test.actor.isOwner && test.actor.status.fortune?.value > 0 && test.result.outcome == "failure" && !test.fortuneUsed.SL 
     };
     let canApplyDarkDeals = function (li) {
       //Condition to have the darkdeak contextual options:
@@ -222,16 +222,6 @@ export default function () {
         }
       },
       {
-        name: game.i18n.localize("CHATOPT.Reroll"),
-        icon: '<i class="fas fa-dice"></i>',
-        condition: canGMReroll,
-        callback: li => {
-          let message = game.messages.get(li.attr("data-message-id"));
-          let test = message.getTest();
-          test.reroll();
-        }
-      },
-      {
         name: game.i18n.localize("CHATOPT.UseFortuneSL"),
         icon: '<i class="fas fa-plus-square"></i>',
         condition: canApplyFortuneAddSL,
@@ -239,16 +229,6 @@ export default function () {
           let message = game.messages.get(li.attr("data-message-id"));
           let test = message.getTest();
           test.actor.useFortuneOnRoll(message, "addSL");
-        }
-      },
-      {
-        name: game.i18n.localize("CHATOPT.DarkDeal"),
-        icon: '<i class="fas fa-pen-nib"></i>',
-        condition: canApplyDarkDeals,
-        callback: li => {
-          let message = game.messages.get(li.attr("data-message-id"));
-          let test = message.getTest();
-          test.actor.useDarkDeal(message);
         }
       },
       {

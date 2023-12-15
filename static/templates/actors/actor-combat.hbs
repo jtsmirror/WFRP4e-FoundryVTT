@@ -217,44 +217,6 @@
   </div>
 </div>
 
-{{#if actor.status.mount.id}}
-{{#if actor.status.mount.mounted}}
-<div class="mount-section">
-{{else}}
-<div class="mount-section" style="opacity: 0.5">
-{{/if}}
-  <div class="mount-header">
-    <span class="name">{{localize "Mount"}} {{#if actor.status.mount.isToken}} ({{localize "Token"}}) {{/if}} </span>
-  </div>
-  <div class="mount-details">
-    <div class="mount-img">
-      <img src="{{actor.mount.img}}">
-    </div>
-    <div class="mount-stats">
-      <div class="mount-stat">
-        <span class="mount-stat-value">{{actor.mount.name}}</span>
-        <span class="mount-stat-label">{{localize "Name"}}</span>
-      </div>
-
-      <div class="mount-stat">
-        <span class="mount-stat-value"> {{actor.mount.status.wounds.value}} / {{actor.mount.status.wounds.max}}</span>
-        <span class="mount-stat-label">{{localize "Wounds"}}</span>
-      </div>
-
-
-    </div>
-    <div class="mount-controls">
-      <a class="item-control mount-remove" title="{{localize 'SHEET.RemoveMount'}}"><i class="fas fa-times"></i></a>
-      <a class="item-control mount-toggle" title="{{localize 'SHEET.Dismount'}}"><i class="fas fa-arrow-down"></i></a>
-    </div>
-  </div>
-</div>
-{{else}}
-<div class="mount-drop">
-  {{localize 'Mount'}}
-</div>
-{{/if}}
-
 <script>
   textContainer = document.querySelectorAll('.app.window-app.sheet.wfrp4e.actor .combat .inventory-list .item');
   length = textContainer.length;

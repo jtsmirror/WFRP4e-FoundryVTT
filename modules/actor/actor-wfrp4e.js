@@ -3362,7 +3362,7 @@ export default class ActorWfrp4e extends Actor {
 
     if (failed) {
       let wpb = this.characteristics.wp.bonus;
-      let tableText = game.i18n.localize("CHAT.MutateTable") + "<br>" + game.wfrp4e.config.corruptionTables.map(t => `@Table[${t}]<br>`).join("")
+      let tableText = game.i18n.localize("CHAT.MutateTable") + "<br>" + "@Table[corruption]<br>"
       ChatMessage.create(WFRP_Utility.chatDataSetup(`
       <h3>${game.i18n.localize("CHAT.DissolutionTitle")}</h3> 
       <p>${game.i18n.localize("CHAT.Dissolution")}</p>
