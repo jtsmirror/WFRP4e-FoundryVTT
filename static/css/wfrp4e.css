@@ -9430,16 +9430,9 @@
       border: 1px solid #736953a6;
     }
     .app.window-app.sheet.wfrp4e.actor.vehicle-sheet .description .note-section.editor-section,
-    .app.window-app.sheet.wfrp4e.actor .tab.notes.active .note-section.biography {
-     height: calc(60% - 25px);
-     width: 100%;
-     margin: -5px 0px 0px 0px;
-     padding: 0px;
-     border: 1px solid #736953a6;
-     border-top: none;
-    }
+    .app.window-app.sheet.wfrp4e.actor .tab.notes.active .note-section.biography,
     .app.window-app.sheet.wfrp4e.actor .tab.notes.active .note-section.gmnotes {
-      height: calc(40% - 25px);
+      height: calc(50% - 25px);
       width: 100%;
       margin: -5px 0px 0px 0px;
       padding: 0px;
