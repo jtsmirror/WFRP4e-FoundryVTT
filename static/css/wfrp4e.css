@@ -10065,6 +10065,54 @@
     flex-direction: row;
   }
 
+/* ==================== (B) WINDOW HEADER ===================== */
+
+.app.window-app.sheet.wfrp4e.actor.vehicle-sheet .window-header .window-title {
+  display: block;
+  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  background: url(../ui/frames/actor-sheet-npc-header.png) no-repeat;
+  /* background: red; */
+  border: none;
+  color: #ff000000;
+  background-position-x: center;
+  background-position-y: 0px;
+  height: 51px;
+  width: 100%;
+  position: absolute;
+  top: -18px;
+  left: 0px;
+  z-index: 0;
+  flex-basis: 100%;
+  opacity: 3.5;
+  order: 3;
+  flex: 1;
+  }
+
+/* ==================== (B) WINDOW HEADER ===================== */
+
+  .app.window-app.sheet.wfrp4e.actor.npc-sheet .window-header .window-title {
+    display: block;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    background: url(../ui/frames/actor-sheet-npc-header.png) no-repeat;
+    /* background: red; */
+    border: none;
+    color: #ff000000;
+    background-position-x: center;
+    background-position-y: 0px;
+    height: 51px;
+    width: 100%;
+    position: absolute;
+    top: -18px;
+    left: 0px;
+    z-index: 0;
+    flex-basis: 100%;
+    opacity: 3.5;
+    order: 3;
+    flex: 1;
+    }
+
 /* ==================== (C) WINDOW BODY ======================= */
   .app.window-app.sheet.wfrp4e.actor .window-content {
     font-size: var(--font-size-13);
@@ -10718,6 +10766,29 @@
   }
   
   /* SECOND ROW */
+
+/* ==================== (B) WINDOW HEADER ===================== */
+ .app.window-app.sheet.wfrp4e.actor.creature-sheet .window-header .window-title {
+  display: block;
+  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  background: url(../ui/frames/actor-sheet-creature-header.png) no-repeat;
+  /* background: red; */
+  border: none;
+  color: #ff000000;
+  background-position-x: center;
+  background-position-y: 0px;
+  height: 51px;
+  width: 100%;
+  position: absolute;
+  top: -18px;
+  left: 0px;
+  z-index: 0;
+  flex-basis: 100%;
+  opacity: 3.5;
+  order: 3;
+  flex: 1;
+  }
 
 /* ==================== (E) TAB SELECTIONS ==================== */
   .app.window-app.sheet.wfrp4e.actor.creature-sheet #tab-sections {
@@ -12115,7 +12186,6 @@ font-family: var(--actor-input-font-family);
       border: 3px double #5d513e;
       border-radius: 0px;
       opacity: 1;
-      text-shadow: 1px 1px 5px #000000
     }
 
   .app.window-app .window-content {
