@@ -217,7 +217,96 @@
   </div>
 </div>
 
+<div class="inventory-header item injury-header">
+  <span class="name">{{localize "Injury"}}</span>
+  <span class="location">{{localize "Location"}}</span>
+  <span class="duration">{{localize "Duration"}}</span>
+  {{#if document.isOwner}}
+  <div class="item-controls">
+    {{else}}
+    <div class="item-controls" style = "visibility : hidden;">
+    {{/if}}
+    <a class="item-control item-create" title="{{localize 'SHEET.CreateItem'}}" data-type="injury"><i class="fas fa-plus"></i></a>
+  </div>
+</div>
+
+<ol class="inventory-list injury-list save-scroll">
+  {{#each items.injuries as |injury i|}}
+  <li class="item" data-item-id="{{injury.id}}">
+    <div class="content">
+      <div class="item-name injury-name item-dropdown">
+        <div class="image" style="background-image: url({{injury.img}})"></div>
+        <a class="name injury-title">{{injury.name}}</a>
+      </div>
+
+      <div class="injury-location">
+        {{injury.location.value}}
+      </div>
+
+      
+      <a class="injury-duration duration">
+        {{#if injury.duration.permanent}}
+        {{localize "Permanent"}}
+        {{else}}
+        {{injury.duration.value}} {{localize "days"}}
+        {{/if}}
+      </a>
+
+      {{#if ../document.isOwner}}
+      <div class="item-controls">
+      {{else}}
+      <div class="item-controls" style = "visibility : hidden;">
+      {{/if}}
+        <a class="item-post" title="{{localize 'SHEET.PostItem'}}"><i class="fas fa-comment"></i></a>
+        <a class="item-control item-edit" title="{{localize 'SHEET.EditItem'}}"><i class="fas fa-edit"></i></a>
+        <a class="item-dropdown" title="{{localize 'SHEET.Dropdown'}}"><i class="fas fa-chevron-down"></i></a>
+        <a class="item-control item-delete" title="{{localize 'SHEET.DeleteItem'}}"><i class="fas fa-trash"></i></a>
+      </div>
+  </li>
+  {{/each}}
+</ol>
+
+<div class="inventory-header item critical-header">
+  <span class="name">{{localize "Critical"}}</span>
+  <span class="location">{{localize "Location"}}</span>
+  {{#if document.isOwner}}
+  <div class="item-controls">
+    {{else}}
+    <div class="item-controls" style = "visibility : hidden;">
+    {{/if}}
+    <a class="item-control item-create" title="{{localize 'SHEET.CreateItem'}}" data-type="critical"><i class="fas fa-plus"></i></a>
+  </div>
+</div>
+
+<ol class="inventory-list critical-list save-scroll">
+  {{#each items.criticals as |critical c|}}
+  <li class="item" data-item-id="{{critical.id}}">
+    <div class="content">
+      <div class="item-name critical-name item-dropdown">
+        <div class="image" style="background-image: url({{critical.img}})"></div>
+        <a class="name critical-title">{{critical.name}}</a>
+      </div>
+
+      <div class="critical-location">
+        {{critical.location.value}}
+      </div>
+
+      {{#if ../document.isOwner}}
+      <div class="item-controls">
+        {{else}}
+        <div class="item-controls" style = "visibility : hidden;">
+        {{/if}}
+        <a class="item-post" title="{{localize 'SHEET.PostItem'}}"><i class="fas fa-comment"></i></a>
+        <a class="item-control item-edit" title="{{localize 'SHEET.EditItem'}}"><i class="fas fa-edit"></i></a>
+        <a class="item-dropdown" title="{{localize 'SHEET.Dropdown'}}"><i class="fas fa-chevron-down"></i></a>
+        <a class="item-control item-delete" title="{{localize 'SHEET.DeleteItem'}}"><i class="fas fa-trash"></i></a>
+      </div>
+  </li>
+  {{/each}}
+</ol>
+
 <script>
   textContainer = document.querySelectorAll('.app.window-app.sheet.wfrp4e.actor .combat .inventory-list .item');
   length = textContainer.length;
 </script>
+

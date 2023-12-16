@@ -23,6 +23,7 @@
   {{/each}}
 </div>
 
+{{#if (isGM)}}
 <div class="inventory-header item list-header">
   <span class="name">{{localize "SHEET.TemporaryEffects"}}</span>
   <span class="source">{{localize "SHEET.Source"}}</span>
@@ -69,175 +70,6 @@
   </li>
   {{/each}}
 </ol>
-
-
-<div class="inventory-header item injury-header">
-  <span class="name">{{localize "Injury"}}</span>
-  <span class="location">{{localize "Location"}}</span>
-  <span class="duration">{{localize "Duration"}}</span>
-  {{#if document.isOwner}}
-  <div class="item-controls">
-    {{else}}
-    <div class="item-controls" style = "visibility : hidden;">
-    {{/if}}
-    <a class="item-control item-create" title="{{localize 'SHEET.CreateItem'}}" data-type="injury"><i class="fas fa-plus"></i></a>
-  </div>
-</div>
-
-<ol class="inventory-list injury-list save-scroll">
-  {{#each items.injuries as |injury i|}}
-  <li class="item" data-item-id="{{injury.id}}">
-    <div class="content">
-      <div class="item-name injury-name item-dropdown">
-        <div class="image" style="background-image: url({{injury.img}})"></div>
-        <a class="name injury-title">{{injury.name}}</a>
-      </div>
-
-      <div class="injury-location">
-        {{injury.location.value}}
-      </div>
-
-      
-      <a class="injury-duration duration">
-        {{#if injury.duration.permanent}}
-        {{localize "Permanent"}}
-        {{else}}
-        {{injury.duration.value}} {{localize "days"}}
-        {{/if}}
-      </a>
-
-      {{#if ../document.isOwner}}
-      <div class="item-controls">
-      {{else}}
-      <div class="item-controls" style = "visibility : hidden;">
-      {{/if}}
-        <a class="item-post" title="{{localize 'SHEET.PostItem'}}"><i class="fas fa-comment"></i></a>
-        <a class="item-control item-edit" title="{{localize 'SHEET.EditItem'}}"><i class="fas fa-edit"></i></a>
-        <a class="item-dropdown" title="{{localize 'SHEET.Dropdown'}}"><i class="fas fa-chevron-down"></i></a>
-        <a class="item-control item-delete" title="{{localize 'SHEET.DeleteItem'}}"><i class="fas fa-trash"></i></a>
-      </div>
-  </li>
-  {{/each}}
-</ol>
-
-<div class="inventory-header item critical-header">
-  <span class="name">{{localize "Critical"}}</span>
-  <span class="location">{{localize "Location"}}</span>
-  {{#if document.isOwner}}
-  <div class="item-controls">
-    {{else}}
-    <div class="item-controls" style = "visibility : hidden;">
-    {{/if}}
-    <a class="item-control item-create" title="{{localize 'SHEET.CreateItem'}}" data-type="critical"><i class="fas fa-plus"></i></a>
-  </div>
-</div>
-
-<ol class="inventory-list critical-list save-scroll">
-  {{#each items.criticals as |critical c|}}
-  <li class="item" data-item-id="{{critical.id}}">
-    <div class="content">
-      <div class="item-name critical-name item-dropdown">
-        <div class="image" style="background-image: url({{critical.img}})"></div>
-        <a class="name critical-title">{{critical.name}}</a>
-      </div>
-
-      <div class="critical-location">
-        {{critical.location.value}}
-      </div>
-
-      {{#if ../document.isOwner}}
-      <div class="item-controls">
-        {{else}}
-        <div class="item-controls" style = "visibility : hidden;">
-        {{/if}}
-        <a class="item-post" title="{{localize 'SHEET.PostItem'}}"><i class="fas fa-comment"></i></a>
-        <a class="item-control item-edit" title="{{localize 'SHEET.EditItem'}}"><i class="fas fa-edit"></i></a>
-        <a class="item-dropdown" title="{{localize 'SHEET.Dropdown'}}"><i class="fas fa-chevron-down"></i></a>
-        <a class="item-control item-delete" title="{{localize 'SHEET.DeleteItem'}}"><i class="fas fa-trash"></i></a>
-      </div>
-  </li>
-  {{/each}}
-</ol>
-
-<div class="inventory-header item mutation-header">
-  <span id="name">{{localize "Corruption&Mutation"}}</span>
-  {{#if (isGM)}}
-  <div class="item-controls">
-  {{else}}
-  <div class="item-controls" style="visibility : hidden">
-    {{/if}}
-    <a class="item-control item-create" title="{{localize 'SHEET.CreateItem'}}" data-type="mutation">
-      <i class="fas fa-plus"></i>
-    </a>
-  </div>
-</div>
-
-
-<ol class="inventory-list mutation-list save-scroll">
-  {{#each items.mutations as |item i|}}
-  <li class="item" data-item-id="{{item.id}}">
-    <div class="content">
-      <div class="item-name currency-name item-dropdown">
-        <div class="image item-image" style="background-image: url({{item.img}})"></div>
-        <span class="name">{{item.name}}</a>
-      </div>
-
-      {{#if ../document.isOwner}}
-      <div class="item-controls">
-      {{else}}
-      <div class="item-controls" style = "visibility : hidden;">
-      {{/if}}
-        <a class="item-post" title="{{localize 'SHEET.PostItem'}}"><i class="fas fa-comment"></i></a>
-        <a class="item-control item-edit" title="{{localize 'SHEET.EditItem'}}"><i class="fas fa-edit"></i></a>
-        <a class="item-dropdown" title="{{localize 'SHEET.Dropdown'}}"><i class="fas fa-chevron-down"></i></a>
-        <a class="item-control item-delete" title="{{localize 'SHEET.DeleteItem'}}"><i class="fas fa-trash"></i></a>
-      </div>
-    </div>
-  </li>
-  {{/each}}
-</ol>
-
-{{#if (isGM)}}
-<div class="inventory-header item disease-header">
-  <div id="name">{{localize "Disease"}}</div>
-  <div id="incubation">{{localize "Incubation"}}</div>
-  <div id="duration">{{localize "Duration"}}</div>
-  <!--<a class="item-control advance-diseases" title="{{localize 'SHEET.AdvanceDiseases'}}"><i class="far fa-arrow-alt-circle-right"></i></a>-->
-  <div class="item-controls">
-    <div class="item-controls" style="visibility : hidden">
-      <a class="item-control item-create" title="{{localize 'SHEET.CreateItem'}}" data-type="disease"><i class="fas fa-plus"></i></a>
-    </div>
-</div>
-</div>
-
-<ol class="inventory-list disease-list save-scroll">
-  {{#each items.diseases as |item i|}}
-  <li class="item" data-item-id="{{item.id}}">
-    <div class="content">
-      <div class="item-name currency-name item-dropdown">
-        <div class="image item-image" style="background-image: url({{item.img}})"></div>
-        <span class="name">{{item.name}}</a>
-      </div>
-
-
-      <a class="incubation disease-roll" data-type="incubation">{{item.incubation.value}} {{item.incubation.unit}}</a>
-      <a class="duration disease-roll" data-type="duration">{{item.duration.value}} {{item.duration.unit}}</a>
-
-      {{#if ../document.isOwner}}
-      <div class="item-controls">
-      {{else}}
-      <div class="item-controls" style = "visibility : hidden;">
-      {{/if}}
-        <a class="item-post" title="{{localize 'SHEET.PostItem'}}"><i class="fas fa-comment"></i></a>
-        <a class="item-control item-edit" title="{{localize 'SHEET.EditItem'}}"><i class="fas fa-edit"></i></a>
-        <a class="item-dropdown" title="{{localize 'SHEET.Dropdown'}}"><i class="fas fa-chevron-down"></i></a>
-        <a class="item-control item-delete" title="{{localize 'SHEET.DeleteItem'}}"><i class="fas fa-trash"></i></a>
-      </div>
-    </div>
-  </li>
-  {{/each}}
-</ol>
-{{/if}}
 
 
 <div class="inventory-header item list-header">
@@ -365,3 +197,4 @@
     {{/each}}
   </select>
 </div>
+{{/if}}
